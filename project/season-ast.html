@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="test.css" />
+</head>
+<body>
+<div class="parallaxast" style="background-repeat: repeat-y;">
+  <div class="main">
+    <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+    <div class="noclick">
+      <button class="button" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">Career</button>
+      <button class="clicked" style="border-radius: 0px 10px 10px 0px">Season</button>
+    </div>
+
+
+
+    <div style="clear:both" class="noclick">
+      <button class="button" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">PTS</button>
+      <button class="button" style = "margin-right:-7px;">REB</button>
+      <button class="clicked" style="border-radius: 0px 10px 10px 0px">AST</button>
+    </div>
+
+    <div style="clear:both" class="noclick">
+      <button class="button" style="margin-left:7px; border-radius: 10px;">All Time Rank</button>
+    </div>
+
+    <!--- MODAL -->
+    <div style="clear:both" class="btn-group">
+      <button id = "myBtn" class="button" style="position: relative; left: 80%; margin-left:7px; margin-top:-30px; border-radius: 10px;">Filter</button>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 style="text-align: left; margin-left: 5px; margin-bottom: -45px;">Sort By:</h2>
+
+
+<form>
+
+  <div style = "margin-top: 5%;" class="radio-group">
+    <input type="radio" id="career" onclick = "uncheckrank()" name="time"><label for="career">Career</label>
+    <input type="radio" id="season" onclick = "uncheckrank()" name="time"><label for="season">Season</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="pts" onclick = "uncheckrank()" name="stat"><label for="pts">PTS</label>
+    <input type="radio" id="reb" onclick = "uncheckrank()" name="stat"><label for="reb">REB</label>
+    <input type="radio" id="ast" onclick = "uncheckrank()" name="stat"><label for="ast">AST</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="alltime" onclick = "uncheck()" name="rank"><label for="alltime">All Time Rank</label>
+  </div>
+
+  <div style="margin-left:75%; margin-top:-10%; margin-bottom:10%;" class="btn-group">
+      <button type= "button" onclick = "idForm()"class="button" style="border-radius: 10px;">Filter</button>
+      </div>
+</form>
+
+      </div>
+
+    </div>
+
+  </div>
+    <div style="background-color: white; width:90%; margin-left: auto; margin-right: auto;">
+      <div id="header">All Time Season Assists Leaders</div>
+
+
+      <div class="row" style = "margin-left: auto; margin-right: auto; width: 90%;">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">1. John Stockton (1990-91)<br/> 1,164 Assists</h2>
+          <img id = "pic" src="stockton90.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>John Stockton 1990-91 Season Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/s/stockjo01/gamelog/1991/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1990-91</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">28</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/UTA/1991.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">UTA</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">PG</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>82</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">82</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.507</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.345</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.541</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.836</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>14.2</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">17.2</td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/s/stockjo01.html" target="_blank" class="bballref bball2" style=" margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/John_Stockton" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">2. John Stockton (1989-90)<br/> 1,134 Assists</h2>
+          <img id = "pic" src="stockton89.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+            <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>John Stockton 1989-90 Season Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/s/stockjo01/gamelog/1990/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1989-90</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">27</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/UTA/1990.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">UTA</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">PG</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">78</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">78</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.514</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.416</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.528</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.819</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>14.5</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">17.2</td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/s/stockjo01.html" target="_blank" class="bballref bball2" style=" margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/John_Stockton" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">3. John Stockton (1987-88)<br/> 1,128 Assists</h2>
+          <img id = "pic" src="stockton.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+<div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>John Stockton 1987-88 Season Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/s/stockjo01/gamelog/1988/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1987-88</a></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">25</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/UTA/1988.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">UTA</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">PG</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">82</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">79</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.574</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.358</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.594</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.840</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>13.8</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">14.7</td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/s/stockjo01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/John_Stockton" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+
+        <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">4. John Stockton (1991-92)<br/> 1,126 Assists</h2>
+          <img id = "pic" src="johnstockton.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+<div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>John Stockton 1991-92 Season Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/s/stockjo01/gamelog/1992/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1991-92</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">29</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/UTA/1992.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">UTA</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">PG</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">82</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">82</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.482</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.407</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.503</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.842</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>13.7</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>3.0</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">15.8</td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/s/stockjo01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/John_Stockton" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+
+        <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+         <h2 id = "title">5. Isiah Thomas (1984-85)<br/> 1,123 Assists</h2>
+          <img id = "pic" src="thomas.jpg"></img>
+          </div>
+        <div class="column right first" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Isiah Thomas 1984-85 Season Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/t/thomais01/gamelog/1985/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1984-85</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">23</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/DET/1985.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">DET</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">PG</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">81</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">81</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.458</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.257</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.809</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>13.9</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">21.2</td></tr>
+   </tbody>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/t/thomais01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Isiah_Thomas" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+  </div>
+</div>
+<div style="position: absolute; background-color: black; color: white; width: 100%; text-align: left; height:5%; left: 0;">
+Made with help from ESPN and Basketball Reference
+</div>
+</body>
+
+<script src="scripts.js">
+</script>
+
+
+</html>

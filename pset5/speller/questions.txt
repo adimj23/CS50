@@ -1,0 +1,7 @@
+0.  A lung disease caused by inhalation of silicate or quartz dust. It is the longest word in the "Speller" dictionary.
+1.  Returns the resource usage for a certain process.
+2.  16
+3.  This is because passing a struct by value would take far too long.
+4.  The file reads character by character, and if the character is alphabetical, adds the character to a word array. The for loop is used to begin at the first character and to keep incrementing until the end of the file. If at any point the word exceeds the number of characters in the longest word defined, the word is thrown out, as well as if any non-alphabetic characters are found, besides the apostrophe sign.
+5.  Using fscanf alone would disable us from being able to restrict characters to only letters in the alphabet and the apostrophe sign.
+6.  The parameters for check and load are constant because they cannot be changed, saving the program some time.

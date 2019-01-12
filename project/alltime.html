@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="test.css" />
+</head>
+<body>
+<div class="parallax">
+  <div class="main">
+    <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+    <div class="noclick">
+      <button class="button" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">Career</button>
+      <button class="button" style="border-radius: 0px 10px 10px 0px">Season</button>
+    </div>
+
+
+
+    <div style="clear:both" class="noclick">
+      <button class="button" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">PTS</button>
+      <button class="button" style = "margin-right:-7px;">REB</button>
+      <button class="button" style="border-radius: 0px 10px 10px 0px">AST</button>
+    </div>
+
+    <div style="clear:both" class="noclick">
+      <button class="clicked" style="margin-left:7px; border-radius: 10px;">All Time Rank</button>
+    </div>
+
+    <!--- MODAL -->
+    <div style="clear:both" class="btn-group">
+      <button id = "myBtn" class="button" style="position: relative; left: 80%; margin-left:7px; margin-top:-30px; border-radius: 10px;">Filter</button>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+
+<form>
+
+  <div style = "margin-top: 7%;" class="radio-group">
+    <input type="radio" id="career" onclick = "uncheckrank()" name="time"><label for="career">Career</label>
+    <input type="radio" id="season" onclick = "uncheckrank()" name="time"><label for="season">Season</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="pts" onclick = "uncheckrank()" name="stat"><label for="pts">PTS</label>
+    <input type="radio" id="reb" onclick = "uncheckrank()" name="stat"><label for="reb">REB</label>
+    <input type="radio" id="ast" onclick = "uncheckrank()" name="stat"><label for="ast">AST</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="alltime" onclick = "uncheck()" name="rank"><label for="alltime">All Time Rank</label>
+  </div>
+
+  <div style="margin-left:75%; margin-top:-10%;" class="btn-group">
+      <button type="button" onclick = "idForm()"class="button" style="border-radius: 10px;">Filter</button>
+      </div>
+</form>
+
+      </div>
+
+    </div>
+
+  </div>
+    <div style="background-color: white; margin-left: auto; margin-right: auto; width: 90%;">
+      <div id="header">Greatest NBA Players Of All Time</div>
+      <div class="row" style = "margin-left: auto; margin-right: auto; width: 90%;">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">1. Michael Jordan</h2>
+          <iframe id="vid" src="https://www.youtube.com/embed/EGgnEIX5f4E"> </iframe>
+          <table style="width:100%">
+            <tr>
+              <th>GP</th>
+              <th>PPG</th>
+              <th>RPG</th>
+              <th>APG</th>
+              <th>SPG</th>
+              <th>BPG</th>
+              <th>FG%</th>
+            </tr>
+            <tr>
+              <td>1072</td>
+              <td>30.1</td>
+              <td>6.2</td>
+              <td>5.3</td>
+              <td>2.3</td>
+              <td>0.8</td>
+              <td>49.7</td>
+            </tr>
+            </table>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Did you know:</h2>
+          <p class = "know">In the 11 seasons in which he played at least 20 games with the Bulls, Jordan finished in the top five of MVP voting 10 times. The exception? His rookie season, when he finished sixth. And in the playoffs, going strictly by seeding, MJ's teams were never upset. Against teams seeded the same or lower, Jordan's teams had a perfect 24-0 series record.</p>
+          <a href ="https://www.basketball-reference.com/players/j/jordami01.html" target="_blank" class="bballref bball2" style="position: relative; top: 100px; right: -70%;">BBRef page ▶</a>
+          <a href ="http://www.espn.com/nba/story/_/page/nbarank1/all-nbarank-1" target="_blank" class="bballref espn3" style="position: relative; top: 100px; right: 20%;">ESPN Rank ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">2. Kareem Abdul-Jabbar</h2>
+          <iframe id="vid" src="https://www.youtube.com/embed/44APFYeR1wM"> </iframe>
+          <table style="width:100%">
+            <tr>
+              <th>GP</th>
+              <th>PPG</th>
+              <th>RPG</th>
+              <th>APG</th>
+              <th>SPG</th>
+              <th>BPG</th>
+              <th>FG%</th>
+            </tr>
+            <tr>
+              <td>1560</td>
+              <td>24.6</td>
+              <td>11.2</td>
+              <td>3.6</td>
+              <td>0.9</td>
+              <td>2.6</td>
+              <td>55.9</td>
+            </tr>
+            </table>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Did you know:</h2>
+          <p class = "know">The NBA's all-time leader in MVP awards, points and Win Shares. Abdul-Jabbar owns three of the top six seasons of all time in terms of Win Shares, including his 1971-72 season in which he averaged 34.8 points and 16.6 rebounds. Even if you counted only his six seasons before joining the Lakers, Abdul-Jabbar would still rank among the top 50 in NBA history in Win Shares. </p>
+          <a href ="https://www.basketball-reference.com/players/a/abdulka01.html" target="_blank" class="bballref bball2" style="position: relative; top: 100px; right: -70%;">BBRef page ▶</a>
+          <a href ="http://www.espn.com/nba/story/_/page/nbarank2/all-nbarank-2" target="_blank" class="bballref espn3" style="position: relative; top: 100px; right: 20%;">ESPN Rank ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">3. Lebron James</h2>
+          <iframe id="vid" src="https://www.youtube.com/embed/KFLPW4mbw5c"> </iframe>
+          <table style="width:100%">
+            <tr>
+              <th>GP</th>
+              <th>PPG</th>
+              <th>RPG</th>
+              <th>APG</th>
+              <th>SPG</th>
+              <th>BPG</th>
+              <th>FG%</th>
+            </tr>
+            <tr>
+              <td>1154</td>
+              <td>27.1</td>
+              <td>7.4</td>
+              <td>7.2</td>
+              <td>1.6</td>
+              <td>0.8</td>
+              <td>50.4</td>
+            </tr>
+            </table>
+          </div>
+        <div class="column right first" style="background-color:#bbb;">
+          <h2>Did you know:</h2>
+          <p class = "know">LeBron James and Michael Jordan are the only players in NBA history with four seasons of having a PER of 30 or higher. LeBron's performance in the 2015 NBA Finals will go down as one of the best of all time as he became the first player in NBA Finals history to lead all players -- from both teams -- in points, rebounds and assists. He scored or assisted on 57.7 points per game, the most by any player in NBA Finals history.</p>
+          <a href ="https://www.basketball-reference.com/players/j/jamesle01.html" target="_blank" class="bballref bball2" style="position: relative; top: 100px; right: -70%;">BBRef page ▶</a>
+          <a href ="http://www.espn.com/nba/story/_/page/nbarank3/all-nbarank-3" target="_blank" class="bballref espn3" style="position: relative; top: 100px; right: 20%;">ESPN Rank ▶</a>
+        </div>
+        <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">4. Magic Johnson</h2>
+          <iframe id="vid" src="https://www.youtube.com/embed/yrC5x3UEx5s"> </iframe>
+          <table style="width:100%">
+            <tr>
+              <th>GP</th>
+              <th>PPG</th>
+              <th>RPG</th>
+              <th>APG</th>
+              <th>SPG</th>
+              <th>BPG</th>
+              <th>FG%</th>
+            </tr>
+            <tr>
+              <td>906</td>
+              <td>19.5</td>
+              <td>7.2</td>
+              <td>11.2</td>
+              <td>1.9</td>
+              <td>0.4</td>
+              <td>52.0</td>
+            </tr>
+            </table>
+          </div>
+        <div class="column right first" style="background-color:#bbb;">
+          <h2>Did you know:</h2>
+          <p class = "know">At his best on the biggest stage, Magic Johnson is the only player in NBA Finals history with multiple triple-doubles in series-clinching games. He averaged 12 assists per game in the NBA Finals six times. No other player has accomplished that even once.</p>
+          <a href ="https://www.basketball-reference.com/players/j/johnsma02.html" target="_blank" class="bballref bball2" style="position: relative; top: 100px; right: -70%;">BBRef page ▶</a>
+          <a href ="http://www.espn.com/nba/story/_/page/nbarank4/all-nbarank-4" target="_blank" class="bballref espn3" style="position: relative; top: 100px; right: 20%;">ESPN Rank ▶</a>
+        </div>
+        <div class="row" style = "margin-bottom: 10%;">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">5. Wilt Chamberlain</h2>
+          <iframe id="vid" src="https://www.youtube.com/embed/8xr3i9jpiTE"> </iframe>
+          <table style="width:100%">
+            <tr>
+              <th>GP</th>
+              <th>PPG</th>
+              <th>RPG</th>
+              <th>APG</th>
+              <th>SPG</th>
+              <th>BPG</th>
+              <th>FG%</th>
+            </tr>
+            <tr>
+              <td>1045</td>
+              <td>30.1</td>
+              <td>22.9</td>
+              <td>4.4</td>
+              <td>NA</td>
+              <td>NA</td>
+              <td>54.0</td>
+            </tr>
+            </table>
+          </div>
+        <div class="column right first" style="background-color:#bbb;">
+          <h2>Did you know:</h2>
+          <p class = "know">Chamberlain had 118 50-point games, 87 more than any other player. He scored at least 60 points 32 times; all other players in NBA history have combined to do that 28 times. He also had a streak of 186 straight games in which he pulled down 15 rebounds and is the only player to ever lead the NBA in rebounds and assists.</p>
+          <a href ="https://www.basketball-reference.com/players/c/chambwi01.html" target="_blank" class="bballref bball2" style="position: relative; top: 100px; right: -70%;">BBRef page ▶</a>
+          <a href ="http://www.espn.com/nba/story/_/page/nbarank5/all-nbarank-5" target="_blank" class="bballref espn3" style="position: relative; top: 100px; right: 20%;">ESPN Rank ▶</a>
+        </div>
+
+  </div>
+</div>
+<div style="position: absolute; background-color: black; color: white; width: 100%; text-align: left; height:5%; left: 0;">
+Made with help from ESPN and Basketball Reference
+</div>
+</body>
+
+
+<script src="scripts.js">
+</script>
+
+
+</html>

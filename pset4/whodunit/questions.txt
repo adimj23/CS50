@@ -1,0 +1,16 @@
+1. stdint.h is a header that specifies the exact width of integer types.
+2. These are integer types with specified widths, making it easier to port the files, since there is no need to worry about how
+different computers might interpret each integer type, in terms of bits.
+3. BYTE- 1 byte
+   DWORD- 4 bytes
+   LONG- 4 bytes
+   WORD- 2 bytes
+4. The first two bytes of any BMP file have to contain the ASCII form of B and the ASCII form of M, in that order.
+5. bfSize is the size of the BMP file and biSize is the size of the header. 
+6. If biHeight is negative, the image is arranged top to bottom.
+7. biBitCount specifies color depth.
+8. fopen might return NULL if it does not have access to the file or if the file does not exist.
+9. The third argument is always one because each pixel needs to be iterated over.
+10. The padding would be 3.
+11. It moves to a specified location in the file.
+12. The position indicator of the file.

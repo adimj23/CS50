@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="test.css" />
+</head>
+<body>
+<div class="parallaxreb" style="background-repeat: repeat-y;">
+  <div class="main">
+    <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+    <div class="noclick">
+      <button class="button" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">Career</button>
+      <button class="clicked" style="border-radius: 0px 10px 10px 0px">Season</button>
+    </div>
+
+
+
+    <div style="clear:both" class="noclick">
+      <button class="button" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">PTS</button>
+      <button class="clicked" style = "margin-right:-7px;">REB</button>
+      <button class="button" style="border-radius: 0px 10px 10px 0px">AST</button>
+    </div>
+
+    <div style="clear:both" class="noclick">
+      <button class="button" style="margin-left:7px; border-radius: 10px;">All Time Rank</button>
+    </div>
+
+    <!--- MODAL -->
+    <div style="clear:both" class="btn-group">
+      <button id = "myBtn" class="button" style="position: relative; left: 80%; margin-left:7px; margin-top:-30px; border-radius: 10px;">Filter</button>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+
+<form>
+
+  <div style = "margin-top: 7%;" class="radio-group">
+    <input type="radio" id="career" onclick = "uncheckrank()" name="time"><label for="career">Career</label>
+    <input type="radio" id="season" onclick = "uncheckrank()" name="time"><label for="season">Season</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="pts" onclick = "uncheckrank()" name="stat"><label for="pts">PTS</label>
+    <input type="radio" id="reb" onclick = "uncheckrank()" name="stat"><label for="reb">REB</label>
+    <input type="radio" id="ast" onclick = "uncheckrank()" name="stat"><label for="ast">AST</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="alltime" onclick = "uncheck()" name="rank"><label for="alltime">All Time Rank</label>
+  </div>
+
+  <div style="margin-left:75%; margin-top:-10%;" class="btn-group">
+      <button type= "button" onclick = "idForm()"class="button" style="border-radius: 10px;">Filter</button>
+      </div>
+</form>
+
+      </div>
+
+    </div>
+
+  </div>
+    <div style="background-color: white; width:90%; margin-left: auto; margin-right: auto;">
+      <div id="header">All Time Season Rebounds Leaders</div>
+
+
+      <div class="row" style = "margin-left: auto; margin-right: auto; width: 90%;">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">1. Wilt Chamberlain 1960-61<br/> 2,149 Rebounds</h2>
+          <img id = "pic" src="wilt.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+<div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Wilt Chamberlain 1960-61</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/c/chambwi01/gamelog/1961/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1960-61</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">24</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/PHW/1961.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">PHW</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">C</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>79</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>47.8</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>.509</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.504</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>27.2</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>38.4</strong></td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/c/chambwi01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Wilt_Chamberlain" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">2. Wilt Chamberlain 1961-62<br/> 2,052 Rebounds</h2>
+          <img id = "pic" src="wc.jpeg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Wilt Chamberlain 1961-62</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/c/chambwi01/gamelog/1962/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1961-62</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">25</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/PHW/1962.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">PHW</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">C</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>80</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>48.5</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.506</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.613</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>25.7</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>50.4</strong></td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"> </p>
+          <a href ="https://www.basketball-reference.com/players/c/chambwi01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Wilt_Chamberlain" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">3. Wilt Chamberlain 1966-67<br/> 1,957 Rebounds</h2>
+          <img id = "pic" src="wiltc.jpeg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Wilt Chamberlain 1966-67</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/c/chambwi01/gamelog/1967/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1966-67</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">30</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/PHI/1967.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">PHI</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">C</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>81</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>45.5</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>.683</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.441</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>24.2</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">24.1</td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"> </p>
+          <a href ="https://www.basketball-reference.com/players/c/chambwi01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Wilt_Chamberlain" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+
+        <div class="row">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">4. Wilt Chamberlain 1967-68<br/> 1,952 Rebounds</h2>
+          <img id = "pic" src="chamb.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Wilt Chamberlain 1967-68</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/c/chambwi01/gamelog/1968/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1967-68</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">31</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/PHI/1968.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">PHI</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">C</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">82</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>46.8</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>.595</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.380</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>23.8</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">8.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">24.3</td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"> </p>
+          <a href ="https://www.basketball-reference.com/players/c/chambwi01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Wilt_Chamberlain" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+
+        <div class="row">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">5. Wilt Chamberlain 1962-63<br/> 1,946 Rebounds</h2>
+          <img id = "pic" src="wilt.jpeg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Season Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Wilt Chamberlain 1962-63</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Age</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Tm</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Pos</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+<tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/players/c/chambwi01/gamelog/1963/?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">1962-63</a><span class="sr_star" id=""></span></th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">26</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><a href="https://www.basketball-reference.com/teams/SFW/1963.html?utm_source=direct&amp;utm_medium=Share&amp;utm_campaign=ShareTool">SFW</a></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">C</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>80</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>47.6</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>.528</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.593</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>24.3</strong></td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; "><strong>44.8</strong></td></tr>
+   </tbody>
+   <tfoot>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"> </p>
+          <a href ="https://www.basketball-reference.com/players/c/chambwi01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Wilt_Chamberlain" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+  </div>
+</div>
+<div style="position: absolute; background-color: black; color: white; width: 100%; text-align: left; height:5%; left: 0;">
+Made with help from ESPN and Basketball Reference
+</div>
+</body>
+
+<script src="scripts.js">
+</script>
+
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+input[type=radio] {
+  position: relative;
+  visibility: hidden;
+  display: none;
+
+}
+
+label {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  display: inline-block;
+  cursor: pointer;
+  margin-left:-5px;
+  margin-right:-5px;
+  padding: 5px 20px;
+
+}
+
+input[type=radio]:checked + label{
+  background-color: black;
+  color: white;
+}
+
+label + input[type=radio] + label {
+  border-left: solid 1px black;
+}
+.radio-group {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 2px;
+  margin-top: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+</style>
+<body>
+
+<form>
+
+  <div class="radio-group">
+    <input type="radio" id="career" name="time"><label for="career">Career</label>
+    <input type="radio" id="season" name="time"><label for="season">Season</label>
+  </div>
+  <div class="radio-group">
+    <input type="radio" id="pts" name="stat"><label for="pts">PTS</label>
+    <input type="radio" id="reb" name="stat"><label for="reb">REB</label>
+    <input type="radio" id="ast" name="stat"><label for="ast">AST</label>
+  </div>
+  <div class="radio-group">
+    <input type="radio" id="total" name="stattype"><label for="total">Total</label>
+    <input type="radio" id="pergame" name="stattype"><label for="pergame">Per Game</label>
+  </div>
+
+  <input type="submit">
+</form>
+
+</body>

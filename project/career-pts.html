@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="test.css" />
+</head>
+<body>
+<div class="parallaxpts" style="background-repeat: repeat-y;">
+  <div class="main">
+    <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+    <div class="noclick">
+      <button class="clicked" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">Career</button>
+      <button class="button" style="border-radius: 0px 10px 10px 0px">Season</button>
+    </div>
+
+
+
+    <div style="clear:both" class="noclick">
+      <button class="clicked" style="margin-left:7px; margin-right:-7px; border-radius: 10px 0px 0px 10px">PTS</button>
+      <button class="button" style = "margin-right:-7px;">REB</button>
+      <button class="button" style="border-radius: 0px 10px 10px 0px">AST</button>
+    </div>
+
+    <div style="clear:both" class="noclick">
+      <button class="button" style="margin-left:7px; border-radius: 10px;">All Time Rank</button>
+    </div>
+
+    <!--- MODAL -->
+    <div style="clear:both" class="btn-group">
+      <button id = "myBtn" class="button" style="position: relative; left: 80%; margin-left:7px; margin-top:-30px; border-radius: 10px;">Filter</button>
+    </div>
+
+
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+
+      <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <h2 style="text-align: left; margin-left: 5px; margin-bottom: -60px;">Sort By:</h2>
+
+
+<form>
+
+  <div style = "margin-top: 7%;" class="radio-group">
+    <input type="radio" id="career" onclick = "uncheckrank()" name="time"><label for="career">Career</label>
+    <input type="radio" id="season" onclick = "uncheckrank()" name="time"><label for="season">Season</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="pts" onclick = "uncheckrank()" name="stat"><label for="pts">PTS</label>
+    <input type="radio" id="reb" onclick = "uncheckrank()" name="stat"><label for="reb">REB</label>
+    <input type="radio" id="ast" onclick = "uncheckrank()" name="stat"><label for="ast">AST</label>
+  </div>
+  <br>
+  <div style="margin-left: 0%" class="radio-group">
+    <input type="radio" id="alltime" onclick = "uncheck()" name="rank"><label for="alltime">All Time Rank</label>
+  </div>
+
+  <div style="margin-left:75%; margin-top:-10%;" class="btn-group">
+      <button type= "button" onclick = "idForm()"class="button" style="border-radius: 10px;">Filter</button>
+      </div>
+</form>
+
+      </div>
+
+    </div>
+
+  </div>
+    <div style="background-color: white; width:90%; margin-left: auto; margin-right: auto;">
+      <div id="header">All Time Career Points Leaders</div>
+
+
+      <div class="row" style = "margin-left: auto; margin-right: auto; width: 90%;">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">1. Kareem Abdul-Jabbar: 38,387 Points</h2>
+          <img id = "pic" src="kareem.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Career Stats:</h2>
+<div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Kareem Abdul-Jabbar Career Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+   </tbody>
+   <tfoot><tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">Career</th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1560</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">625</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">36.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.559</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.056</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.560</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.721</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">11.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.9</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">24.6</td></tr>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/a/abdulka01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">2. Karl Malone: 36,928 Points</h2>
+          <img id = "pic" src="malone.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Career Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Per Game Table</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+   </tbody>
+   <tfoot><tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">Career</th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1476</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1471</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">37.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.516</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.274</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.519</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.742</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">10.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">25.0</td></tr>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"> </p>
+          <a href ="https://www.basketball-reference.com/players/m/malonka01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Karl_Malone" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+      <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+          <h2 id = "title">3. Kobe Bryant: 33,643 Points</h2>
+          <img id = "pic" src="kobe.jpg"></img>
+          </div>
+        <div class="column right" style="background-color:#bbb;">
+          <h2>Career Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Kobe Bryant Career Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+   </tbody>
+   <tfoot><tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">Career</th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1346</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1198</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">36.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.447</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.329</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.479</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.837</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.1</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.0</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">25.0</td></tr>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/b/bryanko01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Kobe_Bryant" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+
+        <div class="row" style = "margin-bottom: 20%;">
+        <div class="column left" style="background-color:#aaa">
+          <h2 id = "title">4. Michael Jordan: 32,292 Points</h2>
+          <img id = "pic" src="mj.jpg"></img>
+          </div>
+        <div class="column right first" style="background-color:#bbb;">
+          <h2>Career Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Michael Jordan Career Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+   </tbody>
+   <tfoot><tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">Career</th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1072</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1039</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">38.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.497</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.327</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.510</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.835</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">4.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">5.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.3</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">2.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">30.1</td></tr>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/j/jordami01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/Michael_Jordan" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+
+        <div class="row">
+        <div class="column left first" style="background-color:#aaa">
+         <h2 id = "title">5. Lebron James: 31,498 Points</h2>
+          <img id = "pic" src="lebron.jpg"></img>
+          </div>
+        <div class="column right first" style="background-color:#bbb;">
+          <h2>Career Stats:</h2>
+          <div class="sr_share_wrap" style="overflow:auto">
+<table class="sr_share" id="" data-cols-to-freeze="1" style="border-collapse: collapse; font-size:.83em; border: 1px sold #aaa; overflow:auto;"><caption>Lebron James Career Stats</caption>
+   <colgroup><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col><col></colgroup>
+   <thead>
+      <tr>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">Season</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">G</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">GS</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">MP</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FG%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">3P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">2P%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">FT%</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">ORB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">DRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TRB</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">AST</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">STL</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">BLK</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">TOV</th>
+         <th scope="col" style="background-color: #ddd; border: 1px solid #aaa; padding: 2px;">PTS</th>
+      </tr>
+   </thead>
+   <tbody>
+   </tbody>
+   <tfoot><tr><th scope="row" style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">Career</th><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1161</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1160</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">38.7</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.504</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.345</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.547</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">.739</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">6.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.4</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">7.2</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">1.6</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">0.8</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">3.5</td><td style="border: 1px solid #ccc; padding: 2px 3px 2px 2px; white-space: nowrap; ">27.2</td></tr>
+   </tfoot>
+</table>
+</div>
+          <p class = "know"></p>
+          <a href ="https://www.basketball-reference.com/players/j/jamesle01.html" target="_blank" class="bballref bball2" style="margin-top: 5%; right: -70%;">BBRef page ▶</a>
+          <a href ="https://en.wikipedia.org/wiki/LeBron_James" target="_blank" class="bballref wiki" style="margin-top: 5%; right: 15%;">Wikipedia ▶</a>
+        </div>
+
+  </div>
+</div>
+<div style="position: absolute; background-color: black; color: white; width: 100%; text-align: left; height:5%; left: 0;">
+Made with help from ESPN and Basketball Reference
+</div>
+</body>
+
+<script src="scripts.js">
+</script>
+
+
+</html>

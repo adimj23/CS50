@@ -1,0 +1,4 @@
+0. The framework allows for any dimensions within the minimum and maximum amounts of 3 and 9, respectively.
+1. The data structure used to represent the board is a two dimensional array.
+2. The greet function is called in order to greet the user.
+3. init(), draw(), move(), won()
